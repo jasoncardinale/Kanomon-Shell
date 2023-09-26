@@ -24,9 +24,9 @@ public class Type
 
     public enum id
     {
-        Grass,
-        Fire,
-        Water,
+        Leaf,
+        Blaze,
+        Hydro,
         Wild,
         Magic,
         Legendary
@@ -36,12 +36,12 @@ public class Type
     {
         switch(type)
         {
-            case id.Grass:
-                return id.Fire;
-            case id.Fire:
-                return id.Water;
-            case id.Water:
-                return id.Grass;
+            case id.Leaf:
+                return id.Blaze;
+            case id.Blaze:
+                return id.Hydro;
+            case id.Hydro:
+                return id.Leaf;
             case id.Wild:
                 return id.Legendary;
             case id.Magic:
@@ -76,24 +76,27 @@ public class Kanomon
         int id,
         int exp,
         int evolveLevel,
-        Type type,
+        Type[] types,
         List<Ability> abilities,
         GameObject gameObject,
         Kanomon nextEvolve
-        )
-    {
+    ) {
         this.name = name;
         this.maxHP = maxHP;
         this.level = level;
         this.id = id;
         this.exp = exp;
         this.evolveLevel = evolveLevel;
-        this.type = type;
+        this.types = types;
         this.abilities = abilities;
         this.gameObject = gameObject;
         this.nextEvolve = nextEvolve;
 
         currentHP = maxHP;
+    }
+
+    public Kanomon fromJson(string name) {
+
     }
 
     int tempExp = 0;

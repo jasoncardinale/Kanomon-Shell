@@ -8,7 +8,7 @@ public class WordlController : MonoBehaviour
     void Start()
     {
         
-    }
+    } 
 
     // Update is called once per frame
     void Update()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Kanopad
 {
     public List<string> knownKanomon = new List<string>();
-    public Dictionary<string, List<Kanomon>> ownedKanonon = new Dictionary<string, List<Kanomon>>();
+    public Dictionary<string, List<Kanomon>> ownedKanomon = new Dictionary<string, List<Kanomon>>();
     public List<Kanomon> playerTeam = new List<Kanomon>();
 
     public void find(Kanomon kanomon)

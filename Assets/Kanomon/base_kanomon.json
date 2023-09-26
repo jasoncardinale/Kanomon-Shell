@@ -1,0 +1,36 @@
+{
+    "tab": {
+        "name": "Tab",
+        "maxHP": 20,
+        "speed": 10,
+        "types": [
+            "hydro"
+        ],
+        "abilities": [],
+        "evolveLevel": 25,
+        "nextEvolve": "keybrorg"
+    },
+    "keybrorg": {
+        "name": "Keybrorg",
+        "maxHP": 70,
+        "speed": 40,
+        "types": [
+            "hydro"
+        ],
+        "abilities": [],
+        "evolveLevel": 50,
+        "nextEvolve": "monitoad"
+    },
+    "monitoad": {
+        "name": "Monitoad",
+        "maxHP": 120,
+        "speed": 60,
+        "types": [
+            "hydro",
+            "magic"
+        ],
+        "abilities": [],
+        "evolveLevel": null,
+        "nextEvolve": null
+    }
+}

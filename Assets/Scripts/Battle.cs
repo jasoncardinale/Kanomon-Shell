@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class Battle
 {
+    // class properties
     public Kanomon[] playerKanomons;
     public Kanomon[] enemyKanomons;
     public int currentPlayerKanomon;
     public int currentEnemyKanomon;
     public BattleType battleType;
 
+    // constructor
     public Battle(
         Kanomon[] playerKanomons, 
         Kanomon[] enemyKanomons,
         BattleType battleType
-        )
-    {
+    ) {
         this.playerKanomons = playerKanomons;
         this.enemyKanomons = enemyKanomons;
         this.battleType = battleType;
     }
-
+ 
     public enum BattleType
     {
         Wild,
