@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ability
-{
+public class Ability {
     public string name;
     public int damage;
     public int healing;
@@ -16,14 +15,12 @@ public class Ability
     }
 }
 
-public class Type
-{
+public class Type {
     public id type;
 
     public Type(id myType) { type = myType; }
 
-    public enum id
-    {
+    public enum id {
         Leaf,
         Blaze,
         Hydro,
@@ -32,10 +29,8 @@ public class Type
         Legendary
     }
 
-    public id getWeakness()
-    {
-        switch(type)
-        {
+    public id getWeakness() {
+        switch(type) {
             case id.Leaf:
                 return id.Blaze;
             case id.Blaze:
@@ -54,8 +49,7 @@ public class Type
     }
 }
 
-public class Kanomon
-{
+public class Kanomon {
     public string name;
     public int maxHP;
     public int level;
@@ -96,7 +90,7 @@ public class Kanomon
     }
 
     public Kanomon fromJson(string name) {
-
+        
     }
 
     int tempExp = 0;

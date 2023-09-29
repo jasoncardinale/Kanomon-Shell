@@ -22,26 +22,22 @@ public class Battle
         this.battleType = battleType;
     }
  
-    public enum BattleType
-    {
+    public enum BattleType {
         Wild,
         Challenge
     }
 
-    public void startBattle()
-    {
+    public void startBattle() {
         currentPlayerKanomon = 0;
         currentEnemyKanomon = 0;
         playerKanomons[currentPlayerKanomon].beginFight();
     }
 
-    public void endBattle()
-    {
+    public void endBattle() {
 
     }
 
-    public void playerAttack(int abilityId)
-    {
+    public void playerAttack(int abilityId) {
         Kanomon kanomon = playerKanomons[currentPlayerKanomon];
 
         if (abilityId < kanomon.abilities.Count)
@@ -51,23 +47,20 @@ public class Battle
         }
     }
 
-    public void enemyAttack()
-    {
+    public void enemyAttack() {
         Kanomon enemy = enemyKanomons[currentEnemyKanomon];
         int damage = enemy.attack(enemy.abilities[Random.Range(0, enemy.abilities.Count)], playerKanomons[currentPlayerKanomon].type);
         playerKanomons[currentPlayerKanomon].takeDamage(playerKanomons[currentPlayerKanomon].type, damage);
     }
 
-    public void swapKanomon(int kanomonId)
-    {
+    public void swapKanomon(int kanomonId) {
         if(kanomonId < playerKanomons.Length)
         {
             currentPlayerKanomon = kanomonId;
         }
     }
 
-    public bool retreat()
-    {
+    public bool retreat() {
         if(battleType == BattleType.Wild)
         {
             return true;
